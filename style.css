@@ -1,0 +1,122 @@
+/* General reset for better cross-browser consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Game container styling */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f5;
+  padding: 20px;
+}
+
+/* Box container for the game grid */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  background-color: #8c8c8c;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Styling for individual boxes */
+.box-container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #4caf50;
+  font-size: 2rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: 5px;
+}
+
+/* Hover effect for boxes */
+.box-container .box:hover {
+  background-color: #e0e0e0;
+}
+
+/* Game info styling */
+.game-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Player selection buttons */
+.player-selector button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.player-selector button:hover {
+  background-color: #45a049;
+}
+
+/* Turn indicator */
+.turn h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Reset button styling */
+.resetbutton button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resetbutton button:hover {
+  background-color: #e53935;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .box-container {
+    max-width: 90%;
+    padding: 5px;
+  }
+
+  .box-container .box {
+    font-size: 1.5rem;
+  }
+
+  .player-selector button,
+  .resetbutton button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .turn h2 {
+    font-size: 1.2rem;
+  }
+}
